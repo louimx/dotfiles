@@ -1,0 +1,18 @@
+{
+    "editor.fontWeight": "bold",
+    "rust-analyzer.hover.memoryLayout.alignment": "hexadecimal",
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true,
+    },
+    "rust-analyzer.cargo.buildScripts.overrideCommand": null,
+    "editor.fontSize": 13,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "window.zoomLevel": -1,
+    "workbench.sideBar.location": "right",
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "git.confirmSync": false,
+    "files.autoSave": "afterDelay"
+}
