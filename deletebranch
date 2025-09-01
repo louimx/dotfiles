@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#Removes all merged branches except the one currently checkout out of or develop and master.
+git branch --merged \
+  | egrep -v "^\*|develop|master" \
+  | xargs -r git branch -d
