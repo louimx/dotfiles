@@ -7,6 +7,13 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+
+    "format_on_save": "off",
+    "languages": {
+        "Rust": {
+            "format_on_save": "on"
+        }
+    },
     "icon_theme": "Catppuccin Latte",
     "project_panel": {
         "dock": "right"
@@ -37,6 +44,5 @@
                 }
             }
         }
-    },
-    "format_on_save": "off"
+    }
 }
