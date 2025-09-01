@@ -7,33 +7,36 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "project_panel": {
-    "dock": "right"
-  },
-  "buffer_font_family": "Zed Mono",
-  "enable_language_server": true,
-  "theme": "Gruvbox Dark Hard",
-  "telemetry": {
-    "diagnostics": true,
-    "metrics": true
-  },
-  "vim_mode": true,
-  "ui_font_size": 12,
-  "buffer_font_size": 12,
-  "lsp": {
-    "rust-analyzer": {
-      "initialization_options": {
-        "inlayHints": {
-          "maxLength": null,
-          "lifetimeElisionHints": {
-            "useParameterNames": true,
-            "enable": "skip_trivial"
-          },
-          "closureReturnTypeHints": {
-            "enable": "always"
-          }
+    "icon_theme": "Catppuccin Latte",
+    "project_panel": {
+        "dock": "right"
+    },
+    "buffer_font_family": "CaskaydiaCove Nerd Font Mono",
+    "enable_language_server": true,
+    "theme": "Catppuccin Frappé",
+    "telemetry": {
+        "diagnostics": true,
+        "metrics": true
+    },
+    "vim_mode": true,
+    "tab_size": 4,
+    "ui_font_size": 15,
+    "buffer_font_size": 15,
+    "lsp": {
+        "rust-analyzer": {
+            "initialization_options": {
+                "inlayHints": {
+                    "maxLength": null,
+                    "lifetimeElisionHints": {
+                        "useParameterNames": true,
+                        "enable": "skip_trivial"
+                    },
+                    "closureReturnTypeHints": {
+                        "enable": "always"
+                    }
+                }
+            }
         }
-      }
-    }
-  }
+    },
+    "format_on_save": "off"
 }
