@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Removing all branches that is merged already"
+
 #Removes all merged branches except the one currently checkout out of or develop and master.
 git branch --merged \
   | egrep -v "^\*|develop|master" \
