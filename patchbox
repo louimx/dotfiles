@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y
+
+echo "$(date +%s)" > "$HOME/.last_patchbox_run"
+
