@@ -1,0 +1,8 @@
+#!/bin/bash
+FILE="$1"
+LINE="${2:-1}"
+
+# Escape to normal mode, then open the file at the specified line
+tmux send-keys -t 1 Escape
+tmux send-keys -t 1 ":e +$LINE $FILE" Enter
+tmux select-pane -t 1

@@ -1,2 +1,2 @@
 #!/bin/bash
-xset r rate 300 25
+xset r rate 190 35
