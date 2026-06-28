@@ -2,25 +2,24 @@
 
 set -euo pipefail
 
-# Directory where this script is located
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-FILES=(
-    ".bashrc"
-    ".profile"
-    ".bash_profile"
+declare -A LINKS=(
+    [".bashrc"]="$HOME/.bashrc"
+    [".profile"]="$HOME/.profile"
+    [".bash_profile"]="$HOME/.bash_profile"
+    ["configs/nvim"]="$HOME/.config/nvim"
 )
 
-for file in "${FILES[@]}"; do
-    target="$DOTFILES_DIR/$file"
-    link="$HOME/$file"
+mkdir -p "$HOME/.config"
 
-    if [[ ! -e "$target" ]]; then
-        echo "Skipping $file (not found)"
-        continue
-    fi
+for source in "${!LINKS[@]}"; do
+    target="$DOTFILES_DIR/$source"
+    link="${LINKS[$source]}"
 
-    ln -sfn "$target" "$link"
+    rm -rf "$link"
+    ln -s "$target" "$link"
+
     echo "Linked $link -> $target"
 done
 
