@@ -8,7 +8,10 @@ declare -A LINKS=(
     [".bashrc"]="$HOME/.bashrc"
     [".profile"]="$HOME/.profile"
     [".bash_profile"]="$HOME/.bash_profile"
+    [".tmux.conf"]="$HOME/.tmux.conf"
+    ["patchbox"]="$HOME/.local/bin/patchbox"
     ["configs/nvim"]="$HOME/.config/nvim"
+    ["configs/i3"]="$HOME/.config/i3"
 )
 
 mkdir -p "$HOME/.config"
