@@ -51,3 +51,6 @@ show_last_patch_run
 # Dotfiles scripts
 export PATH="/home/a/dotfiles/scripts:$PATH"
 export PATH="/home/a/base/installed:$PATH"
+
+# Dotfiles scripts
+export PATH="/home/alex/dotfiles/scripts:$PATH"

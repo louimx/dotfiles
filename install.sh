@@ -19,7 +19,7 @@ mkdir -p "$HOME/.config"
 for source in "${!LINKS[@]}"; do
     target="$DOTFILES_DIR/$source"
     link="${LINKS[$source]}"
-
+    mkdir -p "$(dirname "$link")"
     rm -rf "$link"
     ln -s "$target" "$link"
 
