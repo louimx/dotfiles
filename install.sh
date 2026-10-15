@@ -13,6 +13,7 @@ declare -A LINKS=(
     ["configs/nvim"]="$HOME/.config/nvim"
     ["configs/i3"]="$HOME/.config/i3"
     ["configs/polybar"]="$HOME/.config/polybar"
+    ["configs/alacritty"]="$HOME/.config/alacritty"
 )
 
 mkdir -p "$HOME/.config"
