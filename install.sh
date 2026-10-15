@@ -12,6 +12,7 @@ declare -A LINKS=(
     ["patchbox"]="$HOME/.local/bin/patchbox"
     ["configs/nvim"]="$HOME/.config/nvim"
     ["configs/i3"]="$HOME/.config/i3"
+    ["configs/polybar"]="$HOME/.config/polybar"
 )
 
 mkdir -p "$HOME/.config"
@@ -34,5 +35,7 @@ if ! grep -Fxq "$PATH_LINE" "$DOTFILES_DIR/.bashrc"; then
     echo "# Dotfiles scripts" >> "$DOTFILES_DIR/.bashrc"
     echo "$PATH_LINE" >> "$DOTFILES_DIR/.bashrc"
 fi
+
+sudo apt install dmenu -y
 
 echo "Done!"

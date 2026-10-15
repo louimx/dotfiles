@@ -29,3 +29,7 @@ export PATH=$PATH:/home/$USER/.local/bin/zed
 export EDITOR="nvim"
 export VISUAL="nvim"
 export LAUNCH_EDITOR="$HOME/.local/bin/nvim-open"
+
+if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+	exec startx /usr/bin/i3
+fi
