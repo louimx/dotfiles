@@ -1,2 +1,7 @@
 [font]
 normal = { family = "CaskaydiaCove Nerd Font" }
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
