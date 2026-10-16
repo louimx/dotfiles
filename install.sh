@@ -9,11 +9,13 @@ declare -A LINKS=(
     [".profile"]="$HOME/.profile"
     [".bash_profile"]="$HOME/.bash_profile"
     [".tmux.conf"]="$HOME/.tmux.conf"
+    [".gitconfig"]="$HOME/.gitconfig"
     ["patchbox"]="$HOME/.local/bin/patchbox"
     ["configs/nvim"]="$HOME/.config/nvim"
     ["configs/i3"]="$HOME/.config/i3"
     ["configs/polybar"]="$HOME/.config/polybar"
     ["configs/alacritty"]="$HOME/.config/alacritty"
+    ["configs/claude/CLAUDE.md"]="$HOME/.claude/CLAUDE.md"
 )
 
 mkdir -p "$HOME/.config" "$HOME/.local/bin"
@@ -89,6 +91,10 @@ PACKAGES=(
     xclip
     ripgrep
     python3-venv
+
+    # Granska AI-ändringar: läsbara diffar och hunk-för-hunk i terminalen
+    git-delta
+    lazygit
 )
 sudo apt install -y "${PACKAGES[@]}"
 
