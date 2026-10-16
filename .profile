@@ -1,4 +1,4 @@
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 NORMAL="\[\033[00m\]"
 BLUE="\[\033[01;34m\]"
@@ -10,20 +10,22 @@ GREEN="\[\e[1;32m\]"
 
 
 
-source ~/dotfiles/scripts/show_git_branch.sh
-#source ~/dotfiles/scripts/good_to_have_scripts/kube_prompt.sh
-source ~/dotfiles/scripts/setxrate.sh
+#. ~/dotfiles/scripts/kube_prompt.sh
+. ~/dotfiles/scripts/setxrate.sh
 
 #source ~/dotfiles/scripts/startup_scripts/screens.sh
 #source ~/dotfiles/scripts/startup_scripts/background.sh
 #source ~/dotfiles/scripts/startup_scripts/background.sh
 #compton -b
 
-export TERMINAL=ghostty
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/pingen/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin
-export PATH=$PATH:/usr/local/bin
-export PATH=$PATH:/home/$USER/.local/bin/zed
+export TERMINAL=alacritty
+# PATH sätts bara en gång, .bashrc sourcar den här filen i varje nytt skal.
+if [ -z "$DOTFILES_PROFILE_LOADED" ]; then
+    export DOTFILES_PROFILE_LOADED=1
+    export PATH="$HOME/dotfiles/scripts:$HOME/.local/bin:$HOME/.npm-global/bin:$PATH"
+    export PATH=$PATH:/usr/local/go/bin
+    export PATH=$PATH:/home/$USER/.local/bin/zed
+fi
 
 
 export EDITOR="nvim"

@@ -1,0 +1,5 @@
+# AppImages och binärer läggs här men följer inte med i git.
+# install.sh gör dem körbara och symlänkar dem till ~/.local/bin
+# med filnamnet minus .AppImage, t.ex. bruno.AppImage -> ~/.local/bin/bruno
+*
+!.gitignore

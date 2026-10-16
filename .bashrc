@@ -4,12 +4,12 @@ alias vi='nvim'
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export CLICOLOR=1
-export PATH=$PATH:/usr/local/bin
-export PATH="$PATH:/home/$USER/programs"
-export PATH="$HOME/.npm-global/bin:$PATH"
 
 
 source $HOME/.profile
+
+# Icke-interaktiva skal (scp, rsync, git över ssh) behöver bara PATH ovan.
+[[ $- != *i* ]] && return
 
 
 export user="c"
@@ -18,16 +18,13 @@ export PS1="\[\e[32m\]┌──(\[\e[94;1m\]$user\e[0;32m\])-[\[\e[38;5;46;1m\]\
 
 
 
-. "$HOME/.cargo/env"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=$HOME/.local/bin:$PATH
 
 
 
-echo "VPN STATUS:" $(mullvad status)
+command -v mullvad >/dev/null && echo "VPN STATUS: $(mullvad status)"
 
 
 # Git branch in prompt.
@@ -47,10 +44,3 @@ show_last_patch_run() {
     fi
 }
 show_last_patch_run
-
-# Dotfiles scripts
-export PATH="/home/a/dotfiles/scripts:$PATH"
-export PATH="/home/a/base/installed:$PATH"
-
-# Dotfiles scripts
-export PATH="/home/alex/dotfiles/scripts:$PATH"
