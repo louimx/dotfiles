@@ -1,0 +1,9 @@
+{
+  "theme": "dark",
+  "permissions": {
+    "deny": ["Read(**/.env)", "Read(**/.env.*)"]
+  },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
+  }
+}

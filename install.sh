@@ -16,6 +16,7 @@ declare -A LINKS=(
     ["configs/polybar"]="$HOME/.config/polybar"
     ["configs/alacritty"]="$HOME/.config/alacritty"
     ["configs/claude/CLAUDE.md"]="$HOME/.claude/CLAUDE.md"
+    ["configs/claude/settings.json"]="$HOME/.claude/settings.json"
 )
 
 mkdir -p "$HOME/.config" "$HOME/.local/bin"
