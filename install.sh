@@ -56,6 +56,9 @@ for l in "$HOME/.local/bin"/*; do
     echo "Removed stale link $l"
 done
 
+# dmenu cachar programlistan och märker inte alltid nya länkar i ~/.local/bin.
+rm -f "$HOME/.cache/dmenu_run"
+
 # Paket som configs och i3 förutsätter. nvim hämtas separat (se readme).
 PACKAGES=(
     # Fönsterhanterare och skrivbord
