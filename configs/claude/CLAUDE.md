@@ -3,5 +3,10 @@
 - Committa aldrig utan att bli ombedd. Användaren granskar diffen i lazygit och committar själv.
 - Kör projektets kompilerings- och testkommando (t.ex. `cargo check`) innan du rapporterar klart.
 - Avsluta varje uppgift med `git diff --stat` och en mening per fil om vad som ändrats och varför.
-- En uppgift i taget. Fråga vid tveksamhet i stället för att gissa.
+- Dela upp arbetet i minsta möjliga steg. Ett steg är en ändring som kan kompileras och granskas för sig, helst en fil eller en funktion.
+- Inför varje steg: säg i en mening vad som ska göras.
+- Efter varje steg: visa diffen, förklara kort vad koden gör, och lista bristerna ärligt (felfall som inte hanteras, antaganden, sådant som inte är testat). Vänta sedan på "kör" innan nästa.
+- Större uppgifter: lista stegen numrerade först, så ordningen kan justeras innan något ändras.
+- Fråga vid tveksamhet i stället för att gissa.
 - Föreslå den minsta lösning som fungerar. Ingen extra abstraktion, inga skript som inte efterfrågats.
+- Skriv extremt läsbar kod: beskrivande namn på variabler och funktioner, korta funktioner som gör en sak, och vanliga if-satser och loopar framför kedjade operatorer, enradare och klurigheter. Hellre tre tydliga rader än en smart.
